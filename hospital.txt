@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+
+// Define the patient structure
+struct Patient {
+    std::string name;
+    int age;
+    std::string diagnosis;
+};
+
+// Function to display patient records
+void displayPatients(const std::vector<Patient>& patients) {
+    for (const auto& patient : patients) {
+        std::cout << "Name: " << patient.name << ", Age: " << patient.age << ", Diagnosis: " << patient.diagnosis << std::endl;
+    }
+}
+
+int main() {
+    // Create two patient objects
+    Patient patient1 = {"John Doe", 45, "Diabetes"};
+    Patient patient2 = {"Jane Smith", 30, "Hypertension"};
+
+    // Display patient records
+    std::vector<Patient> patients = {patient1, patient2};
+    displayPatients(patients);
+
+    return 0;
+}
